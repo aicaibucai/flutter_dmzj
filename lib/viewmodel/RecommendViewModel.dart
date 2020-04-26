@@ -21,6 +21,9 @@ class RecommendViewModel extends BaseViewModel.BaseViewModel{
         _result.add(RecommendEntity.fromMap(item));
       }
       status=BaseViewModel.Status.SUCCESS;
+      _result.removeWhere((res){
+        return res.categoryId==46||res.categoryId==93;
+      });
      return _result;
    }).catchError((error){
      status=BaseViewModel.Status.ERROR;

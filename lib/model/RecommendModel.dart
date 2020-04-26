@@ -13,9 +13,9 @@ class RecommendModel{
 
 class ComicModel{
   String name;
-  num code;
+  num comic_id;
   bool update;
   String image;
-  ComicModel(this.name, this.code, this.update,this.image);
+  ComicModel(this.name, this.comic_id, this.update,this.image);
 
 }

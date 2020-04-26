@@ -40,7 +40,15 @@ class NetManage{
    return await _dio.get("recommend_index_android.json",queryParameters: param).then((value){
      return value.toString();
    });
+  }
 
+  Future<String> getComicBookDetails(int comicId)async{
+    Map<String,num> param={
+      "timestamp":DateTime.now().millisecondsSinceEpoch,
+    };
+    return await _dio.get("comic/comic_$comicId.json",queryParameters: param).then((value){
+      return value.toString();
+    });
   }
 
 
